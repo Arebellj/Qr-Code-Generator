@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Code Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
+</head>
+<body>
+
+  <!-- Welcome Page -->
+  <section id="welcomePage">
+    <h1>QR Code Generator</h1>
+    <button id="nextBtn">Next</button>
+    <p class="footer">Made by Alvi</p>
+    <p class="footer">Powered by qrcode.min.js</p>
+  </section>
+
+  <!-- Home Page -->
+  <section id="homePage" style="display:none;">
+    <h1>Choose an Option</h1>
+    <button id="profileBtn">Profile Card</button>
+    <button id="textBtn">Text</button>
+    <button id="encryptedBtn">Encrypted QR Code</button>
+    <button id="homeBackBtn">Back</button>
+  </section>
+
+  <!-- Profile Card Page -->
+  <section id="profilePage" style="display:none;">
+    <h1>Profile Card QR Generator</h1>
+    <form id="qrForm">
+      <input type="text" id="name" placeholder="Name">
+      <input type="tel" id="phone" inputmode="numeric" pattern="[0-9]*" placeholder="Phone Number">
+      <input type="email" id="email" placeholder="Email">
+      <textarea id="address" maxlength="200" placeholder="Address (max 200 chars)"></textarea>
+      <div class="counter"><small id="addressCounter">0 / 200</small></div>
