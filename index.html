@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QR Code Hub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="qrcode.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Welcome Page -->
+  <section id="welcomePage">
+    <h1>QR Code Generator</h1>
+    <button id="nextBtn">Next</button>
+    <p class="footer">Made by Alvi</p>
+    <p class="footer">Powered by qrcode.min.js</p>
+  </section>
+
+  <!-- Home Page -->
+  <section id="homePage" style="display:none;">
+    <h1>Choose an Option</h1>
+    <button id="profileBtn">Profile Card</button>
+    <button id="textBtn">Text</button>
+    <button id="encryptedBtn">Encrypted QR Code</button>
+    <button id="homeBackBtn">Back to Welcome</button>
+  </section>
+
+  <!-- Profile Card Page -->
+  <section id="profilePage" style="display:none;">
+    <h1>Profile Card Generator</h1>
+    <form id="profileForm">
+      <input type="text" id="name" placeholder="Name">
+      <input type="number" id="phone" placeholder="Phone Number">
+      <input type="email" id="email" placeholder="Email">
+      <input type="text" id="address" placeholder="Address">
+      <textarea id="about" maxlength="100" placeholder="About (max 100 chars)"></textarea>
+      <div class="counter"><span id="aboutCounter">0</span>/100</div>
+      <button type="submit">Generate QR</button>
+    </form>
+    <div id="profileError" class="error"></div>
+    <div id="qrcode"></div>
+    <button id="downloadBtn" style="display:none;">Download QR</button>
+    <button id="profileBackBtn">Back</button>
+  </section>
+
+  <!-- Text QR Page -->
+  <section id="textPage" style="display:none;">
+    <h1>Text QR Generator</h1>
+    <form id="textForm">
+      <textarea id="textInput" placeholder="Enter text"></textarea>
+      <button type="submit">Generate QR</button>
+    </form>
+    <div id="textError" class="error"></div>
+    <div id="textQRCode"></div>
+    <button id="textDownloadBtn" style="display:none;">Download QR</button>
+    <button id="textBackBtn">Back</button>
+  </section>
+
+  <!-- Encrypted QR Page -->
+  <section id="encryptedPage" style="display:none;">
+    <h1>Encrypted QR Generator</h1>
+    <p>Coming soon!</p>
+    <button id="encryptedBackBtn">Back</button>
+  </section>
+</body>
+</html>
